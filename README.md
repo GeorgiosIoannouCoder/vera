@@ -1,3 +1,5 @@
+***NOTE: The original GitHub repository of this project can be found [here](https://github.com/AlexOneUp/VERA_CTP).***
+
 <div>
     <h1  align="center" >Voice Emotion Recognition of Audio 🔊</h1>
 </div>
