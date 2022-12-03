@@ -1,0 +1,26 @@
+# Environments
+.vera-venv
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Pyenv
+.python-version
+
+# Apple Desktop Services Store
+.DS_Store
+.DS_Store?
+
+# Datasets
+Datasets/
+
+# Python Cache Files
+backend/__pycache__/
+__pycache__/
+
+# Visual Studio Code
+.vscode/*
+.vscode/
+!.vscode/settings.json
