@@ -1,0 +1,56 @@
+Instructions to setup your virtual environment using pyenv on Debian/Ubuntu:
+
+1. Install the necessary changes with this command:
+    sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+    libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl \
+    git
+
+2. Install pyenv:
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+3. Add the pyenv to your $PATH (if you use a different shell than bash you have to change ~/.bashrc accordingly):
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+
+4. Install Python Version 3.10.8:
+    pyenv install 3.10.8
+
+5. Clone this repository:
+    git clone https://github.com/GeorgiosIoannouCoder/vera.git
+
+6. Navigate to the cloned repository folder:
+    cd vera
+
+7. Use the installed Python version in the cloned repository folder:
+    pyenv local 3.10.8
+
+8. Create virtual environment in the cloned repository folder:
+    python -m venv .vera-venv
+
+9. Activate the virtual environment:
+    source .vera-venv/bin/activate
+
+10. Install the dependencies listed in the requirements.txt file:
+    pip install -r requirements.txt
+
+11. Install ipykernel:
+    pip install ipykernel
+
+12. Install Jupyter Notebook:
+    pip install jupyter notebook
+
+13. Add the kernel of the virtual environment in the Jupyter Notebook:
+    ipython kernel install --user --name=.vera-venv
+
+14. Run the Jupyter Notebook:
+    jupyter notebook
+
+15. Select the .vera-venv kernel to run the Jupyter Notebook.
+
+16. Navigate to frontend:
+    cd frontend
+    
+17. Run streamlit:
+    streamlit run app.py

@@ -1,0 +1,66 @@
+Instructions to setup your virtual environment using pyenv on Microsoft Windows:
+
+1. Install pyenv:
+    1.1 Download the zip file of the following GitHub repository:
+          https://github.com/pyenv-win/pyenv-win
+    1.2 Create a new folder .pyenv in your user folder with the name .pyenv by typing the following command in the Windows PowerShell:
+           mkdir $HOME/.pyenv
+    1.3 Extract the ZIP-archive in your downloads folder and copy the pyenv-win folder and the .version file from the pyenv-win-master folder into the newly created .pyenv folder in your user folder.
+    1.4 Set the environment variables PYENV and PYENV_HOME that point to the installation folder:
+          [System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+          [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+    1.5 Add the bin folder to the PATH variable such that pyenv can be found when using the command line:
+          [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
+    1.6 Close the current Windows PowerShell.
+    1.7 Start a new Windows PowerShell with admin privileges by right-clicking on the Windows PowerShell icon in the start menu and choose Run as administrator.
+    1.8 Enter the following command into the PowerShell to enable the execution of scripts (press A to choose Yes to ALL):
+           Set-ExecutionPolicy unrestricted
+    1.9 Close the current Windows PowerShell.
+    1.10 Start a new Windows PowerShell.
+    1.11 Type the following command to make sure that pyenv has been installed successfully:
+           pyenv
+    1.12 If you encounter a security warning from where you have to choose if you want to run pyenv you can disable this warning by “unblocking” the pyenv script with the following command:
+           Unblock-File $HOME/.pyenv/pyenv-win/bin/pyenv.ps1
+
+2. Open a new command line/terminal.
+
+3. Install Python Version 3.10.8:
+    pyenv install 3.10.8
+
+4. Clone this repository:
+    git clone https://github.com/GeorgiosIoannouCoder/vera.git
+
+5. Navigate to the cloned repository folder:
+    cd vera
+
+6. Use the installed Python version in the cloned repository folder:
+    pyenv local 3.10.8
+
+7. Create virtual environment in the cloned repository folder:
+    python -m venv .vera-venv
+
+8. Activate the virtual environment:
+    .\.vera-venv\Scripts\activate
+
+9. Install the dependencies listed in the requirements.txt file:
+    pip install -r requirements.txt
+
+10. Install ipykernel:
+    pip install ipykernel
+
+11. Install Jupyter Notebook:
+    pip install jupyter notebook
+
+12. Add the kernel of the virtual environment in the Jupyter Notebook:
+    ipython kernel install --user --name=.vera-venv
+
+13. Run the Jupyter Notebook:
+    jupyter notebook
+
+14. Select the .vera-venv kernel to run the Jupyter Notebook.
+
+14. Navigate to frontend:
+    cd frontend
+    
+15. Run streamlit:
+    streamlit run app.py
