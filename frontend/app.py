@@ -340,22 +340,22 @@ if st.session_state["initial_styling"]:
     styling(particle=st.session_state["particle"])
 
 # Create custom grid.
-grid1 = make_grid(1, 14)
+grid1 = make_grid(3, (12, 12, 4))
 
 # Prompt Button.
-prompt = grid1[0][5].button("Prompt")
+prompt = grid1[0][0].button("Prompt")
 if prompt or st.session_state["is_prompt"]:
     st.session_state["is_emotion"] = False
     prompt_btn()
 
 # Emotion Button.
-emotion = grid1[0][7].button("Emotion")
+emotion = grid1[0][2].button("Emotion")
 if emotion or st.session_state["is_emotion"]:
     st.session_state["is_prompt"] = False
     emotion_btn()
 
 # Create custom grid.
-grid2 = make_grid(3, (12, 12, 3))
+grid2 = make_grid(3, (12, 12, 4))
 
 
 # Record Button.
