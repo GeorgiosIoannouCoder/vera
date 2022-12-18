@@ -9,7 +9,7 @@
 <p align="center">
    <a
       href="https://stock.adobe.com/search?k=waveform&asset_id=327369570" target="_blank">
-      <img src="/frontend/styles/Waveform.jpg"
+      <img src="/frontend/styles/VERA-landing.gif"
       alt="Waveform illustration" width="600" height="300"/>
    </a>
 </p>
