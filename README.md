@@ -60,6 +60,10 @@ An audio classification project which takes audio files recorded from human spee
 
 You can check the Jupyter Notebook for all the workings of the model [here](https://nbviewer.org/github/GeorgiosIoannouCoder/vera/blob/main/backend/vera-notebook.ipynb).
 
+## SETUP INSTRUCTIONS
+
+You can view all the setup instructions depening on your operating system in the setup folder [here](https://github.com/GeorgiosIoannouCoder/vera/tree/main/setup).
+The file paths must follow the conventions found in the .env.txt file [here](https://github.com/GeorgiosIoannouCoder/vera/blob/main/.env.txt).
 ## SPECIAL MENTIONS
 
 [Vijay Anandan](https://www.linkedin.com/in/vijay-anadan) who helped coordinate with the ideation and guidance in the project.
