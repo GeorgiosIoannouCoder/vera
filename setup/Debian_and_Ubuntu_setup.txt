@@ -51,6 +51,8 @@ Instructions to setup your virtual environment using pyenv on Debian/Ubuntu:
 
 16. Navigate to frontend:
     cd frontend
-    
-17. Run streamlit:
+
+17. Look at the .env.txt file of this repository for the file paths.
+
+18. Run streamlit:
     streamlit run app.py

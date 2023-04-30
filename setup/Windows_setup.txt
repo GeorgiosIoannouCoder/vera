@@ -61,6 +61,8 @@ Instructions to setup your virtual environment using pyenv on Microsoft Windows:
 
 14. Navigate to frontend:
     cd frontend
-    
-15. Run streamlit:
+
+15. Look at the .env.txt file of this repository for the file paths.
+
+16. Run streamlit:
     streamlit run app.py
